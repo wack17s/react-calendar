@@ -1,9 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from "react-redux";
-
-import configureStore from "./store/configureStore";
-const store = configureStore();
 
 // Save a reference to the root element for reuse
 const rootEl = document.getElementById("root");
@@ -14,9 +10,7 @@ let render = () => {
     const App = require("./components/App").default;
     
     ReactDOM.render(
-        <Provider store={store}>
-            <App />
-        </Provider>,
+        <App />,
         rootEl
     );
 };
